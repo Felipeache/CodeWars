@@ -14,12 +14,12 @@ number2
 
 SELECT 
 CASE 
-  WHEN mod(sum(number1),2)=0 THEN MIN(number1) 
-   ELSE MAX(number1) 
+  WHEN mod(sum(number1),2)=0 THEN MAX(number1) 
+   ELSE MIN(number1) 
 END as number1,
 CASE
-  WHEN MOD(SUM(number2),2)=0 THEN MIN(number2)
-  ElSE MAX(number2)
+  WHEN MOD(SUM(number2),2)=0 THEN MAX(number2)
+  ElSE MIN(number2)
 END as number2
 FROM 
   numbers

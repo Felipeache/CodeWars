@@ -24,3 +24,17 @@ Expected Output Table
 -games INTEGER
 -batting_average STRING
 */
+
+
+SELECT player_name,
+       games,
+       cast(round(hits/at_bats::decimal, 3) as TEXT) as batting_average    
+FROM 
+  yankees
+WHERE 
+  at_bats > 100
+ORDER BY  
+  batting_average DESC
+
+
+
